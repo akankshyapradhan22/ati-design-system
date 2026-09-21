@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/react-vite";
 import path from "path";
 
 const config: StorybookConfig = {
@@ -9,17 +9,20 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
   ],
   framework: {
-    name: "@storybook/nextjs",
+    name: "@storybook/react-vite",
     options: {},
   },
   docs: { autodocs: "tag" },
-  webpackFinal: async (config) => {
-    if (config.resolve) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
+  viteFinal: async (config) => {
+    const { default: tailwindcss } = await import("@tailwindcss/vite");
+    config.plugins = [...(config.plugins || []), tailwindcss()];
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...((config.resolve?.alias as Record<string, string>) || {}),
         "@": path.resolve(__dirname, "../src"),
-      };
-    }
+      },
+    };
     return config;
   },
 };
