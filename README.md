@@ -11,8 +11,7 @@ Ati Motors component library — Untitled UI PRO + Ati brand tokens, built with 
 ```
 ati-react-ui/
 ├── apps/
-│   ├── web/          Next.js 16 + Untitled UI PRO (all components)
-│   └── storybook/    Storybook 8 component catalog
+│   └── web/          Next.js 16 + Untitled UI PRO (all components)
 └── packages/
     └── ui/           Shared @ati/ui publishable package
 ```
