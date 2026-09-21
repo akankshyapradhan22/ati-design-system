@@ -1,4 +1,4 @@
-name: Deploy Storybook to GitHub Pages
+name: Deploy MkDocs to GitHub Pages
 
 on:
   push:
@@ -20,19 +20,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-python@v5
         with:
-          node-version: 22
+          python-version: "3.x"
 
-      - name: Install dependencies
-        run: cd apps/web && npm install --legacy-peer-deps
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
 
-      - name: Build Storybook
-        run: cd apps/web && npm run build-storybook -- --output-dir storybook-static
+      - name: Build MkDocs
+        run: mkdocs build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/web/storybook-static
+          path: site/
 
   deploy:
     needs: build

@@ -1,0 +1,98 @@
+site_name: ATI Design System
+site_description: Ati Motors component library — Untitled UI PRO + Tailwind CSS v4, branded with Ati teal
+site_url: https://akankshyapradhan22.github.io/ati-design-system/
+repo_url: https://github.com/akankshyapradhan22/ati-design-system
+repo_name: ati-design-system
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Foundations:
+      - Colors: foundations/colors.md
+      - Typography: foundations/typography.md
+      - Spacing & Radius: foundations/spacing.md
+      - Shadows: foundations/shadows.md
+      - Icons: foundations/icons.md
+  - Components:
+      - Overview: components/index.md
+      - Button: components/button.md
+      - Badge: components/badge.md
+      - Avatar: components/avatar.md
+      - Input: components/input.md
+      - Checkbox: components/checkbox.md
+      - Toggle: components/toggle.md
+      - Select: components/select.md
+      - Tooltip: components/tooltip.md
+      - Tabs: components/tabs.md
+      - Pagination: components/pagination.md
+      - Slider: components/slider.md
+      - Featured Icon: components/featured-icon.md
+      - Button Group: components/button-group.md
+      - Loading Indicator: components/loading-indicator.md
+      - Progress Indicator: components/progress-indicator.md
+      - Empty State: components/empty-state.md
+  - Design Tokens: tokens.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/akankshyapradhan22/ati-design-system

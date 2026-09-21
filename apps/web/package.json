@@ -5,9 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
-        "start": "next start",
-        "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build"
+        "start": "next start"
     },
     "dependencies": {
         "@internationalized/date": "^3.12.4",
@@ -36,15 +34,6 @@
         "tailwindcss-react-aria-components": "^2.0.1"
     },
     "devDependencies": {
-        "@storybook/addon-essentials": "^8.6.0",
-        "@storybook/addon-interactions": "^8.6.0",
-        "@storybook/addon-links": "^8.6.0",
-        "@storybook/blocks": "^8.6.0",
-        "@storybook/react": "^8.6.0",
-        "@storybook/react-vite": "^8.6.0",
-        "@storybook/test": "^8.6.0",
-        "@tailwindcss/vite": "^4.2.2",
-        "vite": "^6.0.0",
         "@trivago/prettier-plugin-sort-imports": "^6.0.2",
         "@types/node": "^25.5.0",
         "@types/react": "^19.2.14",
@@ -53,7 +42,6 @@
         "postcss-loader": "^8.2.1",
         "prettier": "^3.8.1",
         "prettier-plugin-tailwindcss": "^0.7.2",
-        "storybook": "^8.6.0",
         "typescript": "^5.9.3"
     }
 }
