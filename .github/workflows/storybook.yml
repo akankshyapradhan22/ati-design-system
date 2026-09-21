@@ -25,7 +25,7 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: cd apps/web && npm install
+        run: cd apps/web && npm install --legacy-peer-deps
 
       - name: Build Storybook
         run: cd apps/web && npm run build-storybook -- --output-dir storybook-static
