@@ -1,10 +1,10 @@
-# Ati React UI
+# ATI Design System
 
 Ati Motors component library — Untitled UI PRO + Ati brand tokens, built with Tailwind CSS v4.
 
 ## 📖 Storybook
 
-**[View Component Library →](https://akankshyapradhan22.github.io/ati-react-ui/)**
+**[View Component Library →](https://akankshyapradhan22.github.io/ati-design-system/)**
 
 ## Monorepo Structure
 
