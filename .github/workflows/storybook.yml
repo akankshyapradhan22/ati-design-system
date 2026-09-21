@@ -24,15 +24,15 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install storybook dependencies
-        run: cd apps/storybook && npm install
+      - name: Install dependencies
+        run: cd apps/web && npm install
 
       - name: Build Storybook
-        run: cd apps/storybook && npm run build-storybook -- --output-dir storybook-static
+        run: cd apps/web && npm run build-storybook -- --output-dir storybook-static
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/storybook/storybook-static
+          path: apps/web/storybook-static
 
   deploy:
     needs: build
